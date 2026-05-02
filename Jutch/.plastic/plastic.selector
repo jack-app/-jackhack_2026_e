@@ -1,4 +1,0 @@
-repository "Jutch/Jutch@15668602109504@cloud"
-  path "/"
-    br "/main"
-    co "/main"
