@@ -22,7 +22,22 @@ public class SceneManage : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(sceneName);
+            FadeController fadeController = FindObjectOfType<FadeController>();
+            if (fadeController != null)
+            {
+                fadeController.FadeOut();
+            }
+            LoadSceneWithDelay();
         }
+    }
+
+    void LoadSceneWithDelay()
+    {
+        Invoke("LoadScene", 0.5f);
+    }
+
+    void LoadScene()
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
