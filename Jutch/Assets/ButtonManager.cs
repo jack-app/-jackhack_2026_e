@@ -44,6 +44,10 @@ public class ButtonManager : MonoBehaviour
     {
         selectedstage = 5;
     }
+    public void OnClickStage6()
+    {
+        selectedstage = 6;
+    }
     public void StartGame()
     {
         SceneManager.LoadScene("Stage" + selectedstage);
