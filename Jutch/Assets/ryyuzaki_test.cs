@@ -5,7 +5,7 @@ using UnityEngine;
 public class ryyuzaki_test : MonoBehaviour
 {
     // 0が青、１が緑
-    public int player_state;
+    public int player_state = 0;
 
     // Start is called before the first frame update
     void Start()
