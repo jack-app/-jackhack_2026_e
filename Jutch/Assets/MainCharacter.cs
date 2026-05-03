@@ -13,14 +13,14 @@ void Update()
         Transform myTransform = this.transform;
 
         //座標の取得
-        Vector3 pos = myTransform.position;
+        Vector2 pos = myTransform.position;
         pos.x += 0.01f;  //x座標へ0.01加算
         pos.y += 0.01f;  //y座標へ0.01加算
 
         myTransform.position = pos; //座標を設定
 
       }
-}
+      
 
 
     
