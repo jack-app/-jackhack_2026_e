@@ -20,6 +20,7 @@ void Update()
         myTransform.position = pos; //座標を設定
 
       }
+}
       
 
 
