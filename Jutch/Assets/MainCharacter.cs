@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,7 +20,8 @@ void Update()
         myTransform.position = pos; //座標を設定
 
       }
-      */
+}
+      
 
 
     
