@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
@@ -116,4 +116,4 @@ public class PlayerMovement : MonoBehaviour
     {
         beltspeed=0.0f;
     }
-}
+}*/
