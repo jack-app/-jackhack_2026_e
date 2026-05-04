@@ -328,6 +328,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 7.9
       objectReference: {fileID: 0}
+    - target: {fileID: 3125879291884780801, guid: 155714ed8a50cf940b00d2b164b58975, type: 3}
+      propertyPath: sceneName
+      value: Stage2
+      objectReference: {fileID: 0}
     - target: {fileID: 5836018725977182093, guid: 155714ed8a50cf940b00d2b164b58975, type: 3}
       propertyPath: m_Name
       value: Goals
