@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/goal.unity
+    guid: dba3ea8c2daf3b5478bc4828cb5edf2b
+  - enabled: 1
+    path: Assets/Jutch.unity
+    guid: 5edba32f7fcd68241a8edaa2baf860bf
   m_configObjects: {}

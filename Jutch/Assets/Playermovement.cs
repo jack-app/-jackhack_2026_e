@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveInput;
     private bool isGrounded;
     private bool isFacingRight = true; // キャラクターが右を向いているか
-
+    public float beltspeed; //ベルトコンベアの速度管理
     void Start()
     {
         // コンポーネントを取得
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // 5. 水平移動の実行
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput * moveSpeed - beltspeed, rb.velocity.y);　//ベルトコンベアの処理を追加しました。
     }
 
     private void Jump()
@@ -100,5 +100,20 @@ public class PlayerMovement : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
+    }
+    private void OnCollisionStay2D(Collision2D collision) //!ベルトコンベア接触検知
+    //タグをつけたオブジェクトに触れると作動します。
+    //"leftbelt"は左向きのベルトコンベア
+    //"rightbelt"は右向きのベルトコンベアにつけてください。
+    // 箱オブジェクトのコードにもコピペしておきます。箱もベルトコンベアに乗ると動くようにします。
+    {
+        if(collision.gameObject.CompareTag("leftbelt"))
+        beltspeed=8.2f;
+        if(collision.gameObject.CompareTag("rightbelt"))
+        beltspeed=-8.2f;
+    }
+    private void OnCollisionExit2D (Collision2D collision)
+    {
+        beltspeed=0.0f;
     }
 }

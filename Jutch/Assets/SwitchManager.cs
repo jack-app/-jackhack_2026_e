@@ -21,7 +21,7 @@ public class SwitchManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")||other.CompareTag("Box"))
         {
             foreach(var target in doorManagers)
             {
@@ -32,7 +32,7 @@ public class SwitchManager : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")||other.CompareTag("Box"))
         {
             foreach(var target in doorManagers)
             {
