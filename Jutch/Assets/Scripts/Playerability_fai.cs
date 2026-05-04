@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class PlayerAbility_fai : MonoBehaviour
 {
-    public enum AbilityType { None, Blue, Red }
+    public enum AbilityType {Blue, Red }
     
     [Header("能力設定")]
-    public AbilityType currentAbility = AbilityType.None;
+    public AbilityType currentAbility = AbilityType.Red;
 
     [Header("赤能力：ダッシュ設定")]
     public float dashPower = 24f;
@@ -36,6 +36,7 @@ public class PlayerAbility_fai : MonoBehaviour
 
     void Update()
     {
+        Debug.Log($"abinab:{currentAbility}");
         // 【修正点1】地面に着地している間、ダッシュ権限をリセット
         if (movement.isGrounded && !isDashing)
         {
@@ -57,21 +58,20 @@ public class PlayerAbility_fai : MonoBehaviour
 
     private void SwitchAbility()
     {
-        if (currentAbility == AbilityType.None) currentAbility = AbilityType.Blue;
+        if (currentAbility == AbilityType.Red) currentAbility = AbilityType.Blue;
         else if (currentAbility == AbilityType.Blue) currentAbility = AbilityType.Red;
-        else currentAbility = AbilityType.None;
 
         UpdateAbilityVisuals();
     }
 
     private void UpdateAbilityVisuals()
     {
-        switch (currentAbility)
+        /*switch (currentAbility)
         {
             case AbilityType.None: sr.color = Color.white; break;
             case AbilityType.Blue: sr.color = new Color(0.5f, 0.5f, 1f); break;
             case AbilityType.Red: sr.color = new Color(1f, 0.5f, 0.5f); break;
-        }
+        }*/
     }
 
     private IEnumerator PerformDash()
@@ -79,7 +79,7 @@ public class PlayerAbility_fai : MonoBehaviour
         isDashing = true;
         rb.gravityScale = 0f;
 
-        float direction = movement.isFacingRight ? 1f : -1f;
+        float direction = movement.isFacingRight ? -1f : 1f;
         rb.velocity = new Vector2(direction * dashPower, 0f);
 
         yield return new WaitForSeconds(dashTime);

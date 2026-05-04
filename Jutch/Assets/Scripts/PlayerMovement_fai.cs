@@ -29,6 +29,8 @@ public class PlayerMovement_fai : MonoBehaviour
     // 他のスクリプトからアクセスできるように public に設定
     [HideInInspector] public bool isFacingRight = true;
 
+    [SerializeField] GroundChecker groundChecker;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -40,7 +42,9 @@ public class PlayerMovement_fai : MonoBehaviour
     void Update()
     {
         // 地面接地判定
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        isGrounded = groundChecker.IsGrounded;
+        Debug.Log($"isGrounded:{isGrounded}");
 
         // ダッシュ中は入力を受け付けない
         if (ability != null && ability.isDashing) 
@@ -81,8 +85,8 @@ public class PlayerMovement_fai : MonoBehaviour
 
     private void UpdateAnimationAndFacing()
     {
-        if (moveInput > 0 && !isFacingRight) Flip();
-        else if (moveInput < 0 && isFacingRight) Flip();
+        if (moveInput > 0 && isFacingRight) Flip();
+        else if (moveInput < 0 && !isFacingRight) Flip();
 
         MovementState state;
 
@@ -117,7 +121,9 @@ public class PlayerMovement_fai : MonoBehaviour
                 anim.SetBool("isJumping", true);
             }
 
-            if(ability.currentAbility == PlayerAbility_fai.AbilityType.Blue)
+            Debug.Log($"currentAbility:{ability.currentAbility}");
+
+            if(ability.currentAbility == PlayerAbility_fai.AbilityType.Red)
             {
                 anim.SetBool("isBlue", true);
             }
