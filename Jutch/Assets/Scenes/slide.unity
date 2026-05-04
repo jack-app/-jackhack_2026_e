@@ -833,8 +833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544db0ccfbc4d9c41938da61240cd641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
-  jumpForce: 12
+  moveSpeed: 5
+  jumpForce: 2
   groundCheck: {fileID: 170833659}
   groundCheckRadius: 0.2
   groundLayer:
