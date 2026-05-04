@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2498860677183455414}
   - component: {fileID: 6474671072227230143}
   - component: {fileID: 9087326042523432550}
+  - component: {fileID: 2167185870554195931}
   m_Layer: 0
   m_Name: On_off_block_green
   m_TagString: OOB
@@ -145,3 +146,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   col: {fileID: 6474671072227230143}
   block_color: 1
+--- !u!114 &2167185870554195931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796519977618552807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d50f56ec24274141a268713c9e9ffbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

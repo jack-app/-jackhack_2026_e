@@ -10,21 +10,21 @@ public class GroundChecker : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("温トリガーエンター");
-        if(collision.transform.CompareTag("Ground"))
+        if(collision.transform.CompareTag("Ground") || collision.transform.CompareTag("leftbelt") || collision.transform.CompareTag("rightbelt") || collision.transform.CompareTag("Box"))
             IsGrounded = true;
     }
 
     void OnTriggerStay2D(Collider2D collision)
     {
         Debug.Log("温トリガーエンター");
-        if(collision.transform.CompareTag("Ground"))
+        if(collision.transform.CompareTag("Ground") || collision.transform.CompareTag("leftbelt") || collision.transform.CompareTag("rightbelt") || collision.transform.CompareTag("Box"))
             IsGrounded = true;
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("温トリガーイグジット");
-        if(collision.transform.CompareTag("Ground"))
+        if(collision.transform.CompareTag("Ground") || collision.transform.CompareTag("leftbelt") || collision.transform.CompareTag("rightbelt") || collision.transform.CompareTag("Box"))
             IsGrounded = false;
     }
 }
