@@ -15,6 +15,24 @@ EditorBuildSettings:
     path: Assets/Jutch.unity
     guid: 5edba32f7fcd68241a8edaa2baf860bf
   - enabled: 1
-    path: Assets/Scenes/Stage 1.unity
+    path: Assets/Scenes/Stage2.unity
     guid: c1cb8ca59dd0ed14cbe1dc0e22162e3f
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 0c181a5958caecd48b664ee327c9ea5d
+  - enabled: 1
+    path: Assets/Scenes/Stage1.unity
+    guid: 12baac9af8445524caf2defc946a4e8a
+  - enabled: 1
+    path: Assets/Scenes/Stage3.unity
+    guid: c120df01d23f446448fefead21489b35
+  - enabled: 1
+    path: Assets/Scenes/Stage4.unity
+    guid: a68d2eda761e88d4492d4b5c639a851f
+  - enabled: 1
+    path: Assets/Scenes/Stage5.unity
+    guid: 55ee7410a0d0ded4d95ec9aa1376303d
+  - enabled: 1
+    path: Assets/Scenes/Stage6.unity
+    guid: 1acc313517158514bbe060be831679e3
   m_configObjects: {}
