@@ -339,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3125879291884780801, guid: 155714ed8a50cf940b00d2b164b58975, type: 3}
       propertyPath: sceneName
-      value: Stage2
+      value: Stage3
       objectReference: {fileID: 0}
     - target: {fileID: 5836018725977182093, guid: 155714ed8a50cf940b00d2b164b58975, type: 3}
       propertyPath: m_Name
@@ -467,6 +467,7 @@ GameObject:
   - component: {fileID: 556476376}
   - component: {fileID: 556476375}
   - component: {fileID: 556476378}
+  - component: {fileID: 556476379}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -592,6 +593,18 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &556476379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556476374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddef7e40e23902647a00e2c638966e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &582502383
 PrefabInstance:
   m_ObjectHideFlags: 0
