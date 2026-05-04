@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 500244223016915341}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,8 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b242aa3d319c5f45b876919958a076d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
-  normalJumpForce: 12
+  moveSpeed: 4
+  normalJumpForce: 8
   fallMultiplier: 4.5
   lowJumpMultiplier: 3
   groundCheck: {fileID: 7480374420275396559}
@@ -223,6 +223,7 @@ MonoBehaviour:
   isGrounded: 0
   isFacingRight: 1
   groundChecker: {fileID: 5460212914767761093}
+  beltspeed: 2
 --- !u!114 &1572456849761380113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,9 +237,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentAbility: 1
-  dashPower: 24
+  dashPower: 8
   dashTime: 0.2
-  highJumpForce: 18
+  highJumpForce: 12
 --- !u!114 &500244223016915341
 MonoBehaviour:
   m_ObjectHideFlags: 0

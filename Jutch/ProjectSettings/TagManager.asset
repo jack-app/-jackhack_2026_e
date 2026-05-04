@@ -8,6 +8,8 @@ TagManager:
   - Melon
   - Ground
   - OOB
+  - leftbelt
+  - rightbelt
   layers:
   - Default
   - TransparentFX

@@ -31,12 +31,15 @@ public class PlayerMovement_fai : MonoBehaviour
 
     [SerializeField] GroundChecker groundChecker;
 
+    public float beltspeed = 0; //ベルトコンベアの速度管理
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         ability = GetComponent<PlayerAbility_fai>();
         rb.gravityScale = 1.5f;
+        beltspeed = 0;
     }
 
     void Update()
@@ -78,8 +81,8 @@ public class PlayerMovement_fai : MonoBehaviour
         if (ability != null && ability.isDashing) return;
 
         // 水平移動：地上では入力(moveInput)を、空中では離陸時の速度(lockedAirSpeed)を使用
-        rb.velocity = new Vector2(isGrounded ? moveInput * moveSpeed : lockedAirSpeed, rb.velocity.y);
-        
+        rb.velocity = new Vector2(isGrounded ? moveInput * moveSpeed - beltspeed : lockedAirSpeed, rb.velocity.y);
+
         ApplyCustomGravity();
     }
 
@@ -152,5 +155,29 @@ public class PlayerMovement_fai : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1f;
         transform.localScale = localScale;
+    }
+
+    private void OnCollisionStay2D(Collision2D collision) //!ベルトコンベア接触検知
+    //タグをつけたオブジェクトに触れると作動します。
+    //"leftbelt"は左向きのベルトコンベア
+    //"rightbelt"は右向きのベルトコンベアにつけてください。
+    // 箱オブジェクトのコードにもコピペしておきます。箱もベルトコンベアに乗ると動くようにします。
+    {
+        if (collision.gameObject.CompareTag("leftbelt"))
+        {
+            Debug.Log("leftbelt");
+            beltspeed=4.2f;
+        }
+        
+        if(collision.gameObject.CompareTag("rightbelt"))
+        {
+            Debug.Log("rightbelt");
+            beltspeed=-4.2f;
+        }
+        
+    }
+    private void OnCollisionExit2D (Collision2D collision)
+    {
+        beltspeed=0.0f;
     }
 } // クラスの終わり
