@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags: []
+=======
+  tags:
+  - Box
+  - Melon
+  - Ground
+>>>>>>> 1e3504056aca17321ea8fb197f37553aaad3431c
   layers:
   - Default
   - TransparentFX
@@ -11,7 +18,11 @@ TagManager:
   - 
   - Water
   - UI
+<<<<<<< HEAD
   - 
+=======
+  - Ground
+>>>>>>> 1e3504056aca17321ea8fb197f37553aaad3431c
   - 
   - 
   - 
