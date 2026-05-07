@@ -5,7 +5,7 @@ using UnityEngine;
 public class FadeController : MonoBehaviour
 {
     SpriteRenderer sr;
-     Color c ;
+    Color c ;
     // Start is called before the first frame update
     void Start()
     {
