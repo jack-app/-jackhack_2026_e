@@ -81,7 +81,7 @@ public class PlayerMovement_fai : MonoBehaviour
         if (ability != null && ability.isDashing) return;
 
         // 水平移動：地上では入力(moveInput)を、空中では離陸時の速度(lockedAirSpeed)を使用
-        rb.velocity = new Vector2(isGrounded ? moveInput * moveSpeed - beltspeed : lockedAirSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput * moveSpeed - beltspeed, rb.velocity.y);
 
         ApplyCustomGravity();
     }
